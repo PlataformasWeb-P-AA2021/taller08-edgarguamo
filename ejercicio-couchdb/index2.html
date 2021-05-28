@@ -32,11 +32,13 @@
                                 data.rows[i].doc.LastName + "</a></li>"
                               );
                               $("#container").append("<div id='tabs-"+ i +"'> <p>"+
-                                        data.rows[i].doc.FIFADisplayName + "</br> " +
-                                        data.rows[i].doc.FirstName + "</br> " + data.rows[i].doc.LastName +
-                                        " </br>" + data.rows[i].doc.POS + "</br> " +
-                                        data.rows[i].doc.Caps + "</br> " + data.rows[i].doc.Goals +
-                                    "</p></div>"
+                                        "<b>Nombre Registrado en la FIFA:</b> " + data.rows[i].doc.FIFADisplayName + "</br> " +
+                                        "<b>Nombres: </b>" + data.rows[i].doc.FirstName + "</br> " +
+                                        "<b>Apellido: </b>" + data.rows[i].doc.LastName + " </br>" +
+                                        "<b>POS: </b>" + data.rows[i].doc.POS + "</br> " +
+                                        "<b>Caps: </b>" + data.rows[i].doc.Caps + "</br> "+
+                                        "<b>Goles: </b>" + data.rows[i].doc.Goals +
+                                        "</p></div>"
                               );
                     }
                 }
