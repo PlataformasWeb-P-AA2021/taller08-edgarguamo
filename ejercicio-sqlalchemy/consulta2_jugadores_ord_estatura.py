@@ -9,7 +9,7 @@ engine = create_engine("sqlite:///mundial2018.db")
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Ordenar a los jugadores por numero de gols
+# Ordenar a los jugadores por numero de estatura
 estatura = session.query(Mundial2018).order_by(Mundial2018.height.desc()).all()
 
 for e in estatura:

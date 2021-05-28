@@ -1,11 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-# se importa la clase(s) del
-# archivo genera_tablas
+# Importación de la clase con las tablas
 from genera_tablas import Mundial2018
 import csv
-import requests
 
 engine = create_engine("sqlite:///mundial2018.db")
 
@@ -22,6 +20,8 @@ with open('./data/mundial2018.csv', encoding="utf-8") as mundial2018_csv:
             country = column[2], last_name = column[3], first_name = column[4],
             shirt_name = column[5], pos = column[6], height = int(column[7]),
             caps = int(column[8]), goals = int(column[9]))
+        # Agregado del la información a la sesión
         session.add(registros)
 
+# Push de los datos
 session.commit()
